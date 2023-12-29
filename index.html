@@ -4,6 +4,9 @@
     <title>How Bad? Pretty Bad LLC.</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0-rc.17/dist/cookieconsent.umd.js"></script>
+
 </head>
 <body>
 
@@ -30,7 +33,13 @@
                     </a>
                 </li>
             </ul>
-            <p>
+
+
+
+             <p>
+                <a class="legal" href="index.html">Home</a>
+            </p>
+             <p>
                 <a class="legal" href="legal-notice.html">Legal notice</a>
             </p>
              <p>
@@ -43,10 +52,47 @@
                 <a class="legal" href="terms-of-sale.html">Terms of sale</a>
             </p>
 
-
         </div>
     </div>
-    
+
+    <script>
+ CookieConsent.run({
+            categories: {
+                necessary: {
+                    enabled: true,
+                    readOnly: true
+                },
+                analytics: {
+                    enabled: false // Désactivez cette catégorie par défaut
+                },
+                // Ajoutez d'autres catégories si nécessaire
+            },
+			language: {
+			    default: 'en', // Set the default language
+			    translations: {
+			        en: {
+			            consentModal: {
+			                title: 'We use cookies',
+			                description: 'We use cookies to optimize our website and our service.',
+			                acceptAllBtn: 'Accept all',
+			                acceptNecessaryBtn: 'Reject all'
+			            },
+			            // Other translations...
+			        }
+			    }
+			},
+            guiOptions: {
+                consentModal: {
+                    layout: 'cloud', // ou 'bar', selon le style souhaité
+                    position: 'bottom center', // Position du modal
+                },
+                preferencesModal: {
+                    enabled: false // Désactive le modal des préférences
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>
 
